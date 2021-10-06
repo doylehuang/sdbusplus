@@ -27,6 +27,10 @@ struct bus;
 namespace message
 {
 
+namespace variant_ns = std;
+template <typename... Args>
+using variant = variant_ns::variant<Args...>;
+
 using msgp_t = sd_bus_message*;
 class message;
 
